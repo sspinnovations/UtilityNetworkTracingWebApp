@@ -10,6 +10,10 @@ In order for the map to operate you need to have a web map set up in ArcGIS Ente
 
 The login for the application is the same login a user would use to log in to Portal
 
+## Environment Variables
+
+Set the portalBaseUrl in the environments/environment.ts file
+
 ## Known Issues
 
 The token received from the server after a successful login has an expiration date.  If you leave the app stale for over an hour and then try to use the functionality it will stop working without any messages to the user as to what happened.  The user will need to logout and login again to get the app working again.  
