@@ -48,4 +48,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Great Electron Guide
 
-(https://angularfirebase.com/lessons/desktop-apps-with-electron-and-angular/)[https://angularfirebase.com/lessons/desktop-apps-with-electron-and-angular/]
+[https://angularfirebase.com/lessons/desktop-apps-with-electron-and-angular/](https://angularfirebase.com/lessons/desktop-apps-with-electron-and-angular/)
