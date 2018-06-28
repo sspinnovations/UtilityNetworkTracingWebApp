@@ -1,0 +1,4 @@
+<select class="form-control" [(ngModel)]="mapSelection" (change)="selectionMade()">
+  <option *ngFor="let wm of webMaps" [value]="wm.id">{{wm.title}}</option>
+</select>
+

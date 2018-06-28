@@ -1,0 +1,13 @@
+<section class="text-center" style="margin-top: 20px">
+  <section class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Please Authenticate with your Portal Credentials</h1>
+    <label for="inputEmail" class="sr-only">Username</label>
+    <input type="text" id="inputEmail" class="form-control" data-lpignore="true" placeholder="username" [(ngModel)]="username" required="" autofocus="" autocomplete="off">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" data-lpignore="true" [(ngModel)]="password" placeholder="Password" required="" autocomplete="off">
+    <button class="btn btn-lg btn-primary btn-block signin" type="submit" (click)="login()">Sign in</button>
+  </section>
+  <section class="text-center; margin-top: 15px">
+    <span style="color: red">{{errorMessage}}</span>
+  </section>
+</section>

@@ -1,0 +1,4 @@
+<select class="form-control" [(ngModel)]="tierSelection" (change)="selectionMade()">
+  <option [ngValue]="null"></option>
+  <option *ngFor="let t of tierItems">{{t.title}}</option>
+</select>

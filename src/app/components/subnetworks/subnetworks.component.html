@@ -1,0 +1,4 @@
+<select class="form-control" [(ngModel)]="snSelection" (change)="selectionMade()">
+  <option *ngFor="let sn of snItems">{{sn.title}}</option>
+</select>
+

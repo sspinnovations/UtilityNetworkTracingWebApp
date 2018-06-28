@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="leftContent">
+    <div class="leftWrapper">
+      <div [hidden]="true">
+        <div class="itemsText">Items:</div>
+        <app-items class="items" (selection)="webMapSelection($event)"></app-items>
+      </div>
+      <div class="dnText">Domain Networks:</div>
+      <app-domainnetworks class="domainNetworks" [itemId]="webMapItemId" (selection)="domainNetworkSelection($event)" (unLoaded)="utilityNetworkLoaded($event)"
+        (loading)="appLoading($event)"></app-domainnetworks>
+      <div class="tiersText">Tiers:</div>
+      <app-tiers class="tiers" [domainNetwork]="selectedDomainNetwork" (selection)="tierSelection($event)"></app-tiers>
+      <div [hidden]='true'>
+        <div class="subnetText">Subnetworks:</div>
+        <app-subnetworks class="subnets" [domainNetwork]="selectedDomainNetwork" [tier]="selectedTier" (selection)="snSelection($event)"></app-subnetworks>
+      </div>
+      <div class="trace-subnetwork" [hidden]="true">
+        <app-trace-subnetwork (traceComplete)="traceResultsReady($event)" (traceBegan)="traceResultsBegan($event)" [domainNetwork]="selectedDomainNetwork"
+          [tier]="selectedTier" [subNetwork]="selectedSubnetwork">
+        </app-trace-subnetwork>
+      </div>
+    </div>
+    <div class="traceWrapper">
+      <div class="trace">
+        <app-trace [traceType]="traceType" (traceTypeChange)="toggleTraceType($event)"></app-trace>
+      </div>
+      <div [hidden]="!displayTraceOptions()">
+        <app-trace-options class="trace-options" [phaseType]="phaseType" (phaseTypeChange)="changePhaseType($event)"></app-trace-options>
+      </div>
+      <div [hidden]="!displayTraceResults()">
+        <div class="trace-results-text">Trace Results:</div>
+        <app-trace-results [traceResults]="traceResults" class="trace-results"></app-trace-results>
+      </div>
+    </div>
+    <div class="loading">
+        <app-loading [loading]="loading"></app-loading>
+      </div>
+  </div>
+  <div class="mainContent">
+    <app-esri-map [center]="mapCenter" [basemap]="basemapType" [zoom]="mapZoomLevel" [loadFromUN]="loadMap" [domainNetwork]="selectedDomainNetwork"
+      [tier]="selectedTier" [subNetwork]="selectedSubnetwork" [traceResults]="traceResults" [traceType]="traceType" (mapLoaded)="mapLoadedEvent($event)"
+      [phaseType]="phaseType" (traceComplete)="traceResultsReady($event)" (traceBegan)="traceResultsBegan($event)">
+    </app-esri-map>
+  </div>
+</div>

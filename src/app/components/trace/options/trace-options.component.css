@@ -1,0 +1,15 @@
+.inline-block {
+    display: inline-block;
+}
+
+.btn-no-focus:focus {
+    outline: none;
+}
+
+.traceOptions {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+    font-size: 26pt;
+    width: 45px;
+}

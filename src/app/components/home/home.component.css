@@ -1,0 +1,114 @@
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(450px, 1.2fr) 4fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.leftContent {
+    margin-top: 30px;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 10px;
+    background-color: ghostwhite;
+}
+
+.mainContent {
+    margin-top: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.leftWrapper {
+    display: grid;
+    grid-row-gap: 7px;
+    grid-template-columns: 100px 1fr;
+    grid-column-gap: 5px;
+}
+
+.traceWrapper {
+    margin-top: 15px;
+    display: grid;
+    grid-row-gap: 7px;
+    grid-column-gap: 5px;
+}
+
+.itemsText {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.items {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.dnText {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.domainNetworks {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.tiersText {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.tiers {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.subnetText {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.subnets {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.trace-subnetwork {
+    grid-row: 5;
+    grid-column: 1 / span 2;
+    text-align: right;
+}
+
+.trace {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.trace-options-text {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.trace-options {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.trace-results-text {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.trace-results {
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.loading {
+    margin-top: 15px;
+}
+
+[hidden] {
+    display: none !important;
+}

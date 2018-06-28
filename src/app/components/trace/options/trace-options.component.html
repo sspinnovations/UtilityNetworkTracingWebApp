@@ -1,0 +1,12 @@
+<div style="display: grid; grid-template-columns: 70px auto; margin-bottom: 25px; margin-top: 15px">
+        <div>
+            <img src="assets/images/DownstreamTraceIcon32.png" />
+        </div>
+        <div><h3>Phase Designation</h3></div>
+    </div>
+
+    <div style="margin-top: 10px">
+<button #btnPhaseA class="inline-block btn-no-focus traceOptions" ([ngModel])="phaseA" (click)="togglePhase(btnPhaseA, phaseA);">A</button>
+<button #btnPhaseB class="inline-block btn-no-focus traceOptions" ([ngModel])="phaseB" (click)="togglePhase(btnPhaseB, phaseB)">B</button>
+<button #btnPhaseC class="inline-block btn-no-focus traceOptions" ([ngModel])="phaseC" (click)="togglePhase(btnPhaseC, phaseC)">C</button>
+</div>

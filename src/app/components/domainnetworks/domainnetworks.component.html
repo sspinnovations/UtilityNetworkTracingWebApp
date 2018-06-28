@@ -1,0 +1,3 @@
+<select class="form-control" [(ngModel)]="dnSelection" (change)="selectionMade()">
+    <option *ngFor="let dn of dnItems" [value]="dn.id">{{dn.title}}</option>
+  </select>

@@ -1,0 +1,11 @@
+<div style="display: grid; grid-template-columns: 70px auto; margin-bottom: 25px; margin-top: 50px">
+    <div>
+        <img src="assets/images/DownstreamTraceIcon32.png" />
+    </div>
+    <div><h3>Tracing Options</h3></div>
+</div>
+
+<div class="btn-group" role="group" aria-label="Trace Options">
+    <button #btnDownstream type="button" class="btn btn-secondary" (click)="toggleDownstream(btnDownstream, btnUpstream)">Downstream Trace</button>
+    <button #btnUpstream type="button" class="btn btn-secondary" (click)="toggleUpstream(btnDownstream, btnUpstream)">Upstream Trace</button>
+  </div>

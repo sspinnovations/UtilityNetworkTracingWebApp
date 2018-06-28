@@ -1,0 +1,8 @@
+.btn-no-focus:focus {
+    outline: none;
+}
+
+.btn-size {
+    width: 50px;
+    height: 60px
+}
